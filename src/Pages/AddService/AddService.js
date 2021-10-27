@@ -6,7 +6,7 @@ const AddService = () => {
     const { register, handleSubmit, reset } = useForm();
     const onSubmit = data => {
         // console.log(data);
-        axios.post('http://localhost:5000/services', data)
+        axios.post('https://warm-mountain-98988.herokuapp.com/services', data)
             .then(res => {
                 if (res.data?.insertedId) {
                 alert('Service added successfully')
@@ -27,7 +27,7 @@ const AddService = () => {
     //     const price = priceRef.current.value;
     //     const newService = { name, price };
         
-    //         fetch('http://localhost:5000/services', {
+    //         fetch('https://warm-mountain-98988.herokuapp.com/services/services', {
     //             method: "POST",
     //             headers: { 'content-type': 'application/json' },
     //             body: JSON.stringify(newService)

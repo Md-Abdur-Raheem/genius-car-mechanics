@@ -5,13 +5,13 @@ const ManageServices = () => {
     const [isdelete, setIsDelete] = useState(false);
 
     useEffect(() => [
-        fetch('http://localhost:5000/services')
+        fetch('https://warm-mountain-98988.herokuapp.com/services')
             .then(res => res.json())
             .then(data => setServices(data))
     ], [isdelete])
 
     const handleClick = id => {
-        const url = `http://localhost:5000/services/${id}`;
+        const url = `https://warm-mountain-98988.herokuapp.com/services/${id}`;
         fetch(url, {
             method: 'DELETE'
         })
